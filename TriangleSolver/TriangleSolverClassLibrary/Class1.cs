@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using TriangleSolver;
 
-
 namespace ClassLibrary
 {
     [TestFixture]
