@@ -60,16 +60,7 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("accidents")).SendKeys("0");
         driver.FindElement(By.Id("phone")).Click();
         driver.FindElement(By.Id("btnSubmit")).Click();
-        //{
-        //    var element = driver.FindElement(By.Id("btnSubmit"));
-        //    Actions builder = new Actions(driver);
-        //    builder.MoveToElement(element).Perform();
-        //}
-        //{
-        //    var element = driver.FindElement(By.tagName("body"));
-        //    Actions builder = new Actions(driver);
-        //    builder.MoveToElement(element, 0, 0).Perform();
-        //}
+    
         driver.FindElement(By.Id("phone")).Click();
         driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
 
