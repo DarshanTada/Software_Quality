@@ -60,16 +60,16 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("accidents")).SendKeys("0");
         driver.FindElement(By.Id("phone")).Click();
         driver.FindElement(By.Id("btnSubmit")).Click();
-        {
-            var element = driver.FindElement(By.Id("btnSubmit"));
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(element).Perform();
-        }
-        {
-            var element = driver.FindElement(By.tagName("body"));
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(element, 0, 0).Perform();
-        }
+        //{
+        //    var element = driver.FindElement(By.Id("btnSubmit"));
+        //    Actions builder = new Actions(driver);
+        //    builder.MoveToElement(element).Perform();
+        //}
+        //{
+        //    var element = driver.FindElement(By.tagName("body"));
+        //    Actions builder = new Actions(driver);
+        //    builder.MoveToElement(element, 0, 0).Perform();
+        //}
         driver.FindElement(By.Id("phone")).Click();
         driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
 
@@ -260,11 +260,11 @@ public class Darshan_Tada_9000046_Assignment4
             Actions builder = new Actions(driver);
             builder.MoveToElement(element).Perform();
         }
-        {
-            var element = driver.FindElement(By.tagName("body"));
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(element, 0, 0).Perform();
-        }
+        //{
+        //    var element = driver.FindElement(By.tagName("body"));
+        //    Actions builder = new Actions(driver);
+        //    builder.MoveToElement(element, 0, 0).Perform();
+        //}
         Assert.That(driver.FindElement(By.Id("postalCode-error")).Text, Is.EqualTo("Postal Code must follow the pattern A1A 1A1"));
     }
     [Test]
@@ -331,11 +331,11 @@ public class Darshan_Tada_9000046_Assignment4
             Actions builder = new Actions(driver);
             builder.MoveToElement(element).Perform();
         }
-        {
-            var element = driver.FindElement(By.tagName("body"));
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(element, 0, 0).Perform();
-        }
+        //{
+        //    var element = driver.FindElement(By.tagName("body"));
+        //    Actions builder = new Actions(driver);
+        //    builder.MoveToElement(element, 0, 0).Perform();
+        //}
         Assert.That(driver.FindElement(By.Id("accidents-error")).Text, Is.EqualTo("Number of accidents is required"));
     }
     [Test]
@@ -370,11 +370,11 @@ public class Darshan_Tada_9000046_Assignment4
             Actions builder = new Actions(driver);
             builder.MoveToElement(element).Perform();
         }
-        {
-            var element = driver.FindElement(By.tagName("body"));
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(element, 0, 0).Perform();
-        }
+        //{
+        //    var element = driver.FindElement(By.tagName("body"));
+        //    Actions builder = new Actions(driver);
+        //    builder.MoveToElement(element, 0, 0).Perform();
+        //}
         Assert.That(driver.FindElement(By.Id("experience-error")).Text, Is.EqualTo("Years of experience is required"));
     }
     [Test]
@@ -412,15 +412,50 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.CssSelector(".container")).Click();
         Assert.That(driver.FindElement(By.Id("firstName-error")).Text, Is.EqualTo("First Name is required"));
     }
+    //[Test]
+    //public void insuranceQuote11validData4Accidentsage45exp12insuranceRefused()
+    //{
+
+    //    //Arrange
+    //    driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
+    //    driver.Manage().Window.Size = new System.Drawing.Size(786, 816);
+
+    //    //Act
+    //    driver.FindElement(By.Id("firstName")).Click();
+    //    driver.FindElement(By.Id("firstName")).SendKeys("Darshan");
+    //    driver.FindElement(By.Id("lastName")).SendKeys("Tada");
+    //    driver.FindElement(By.Id("address")).SendKeys("507, 383 albert street");
+    //    driver.FindElement(By.Id("city")).SendKeys("waterloo");
+    //    driver.FindElement(By.Id("postalCode")).SendKeys("N2L 6E3");
+    //    driver.FindElement(By.Id("phone")).SendKeys("5483983379");
+    //    driver.FindElement(By.Id("phone")).Click();
+    //    driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
+    //    driver.FindElement(By.Id("email")).Click();
+    //    driver.FindElement(By.Id("email")).SendKeys("darshantada7@gmail.com");
+    //    driver.FindElement(By.Id("age")).Click();
+    //    driver.FindElement(By.Id("age")).SendKeys("45");
+    //    driver.FindElement(By.Id("experience")).Click();
+    //    driver.FindElement(By.Id("experience")).SendKeys("12");
+    //    driver.FindElement(By.Id("accidents")).Click();
+    //    driver.FindElement(By.Id("accidents")).SendKeys("4");
+
+    //    //Assert
+    //    driver.FindElement(By.Id("btnSubmit")).Click();
+    //    {
+    //        string value = driver.FindElement(By.Id("finalQuote")).GetAttribute("value");
+    //        Assert.That(value, Is.EqualTo("No Insurance for you!!  Too many accidents - go take a course!"));
+    //    }
+    //}
+
+
     [Test]
     public void insuranceQuote11validData4Accidentsage45exp12insuranceRefused()
     {
-
-        //Arrange
+        // Arrange
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(786, 816);
 
-        //Act
+        // Act: Fill out the form
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Darshan");
         driver.FindElement(By.Id("lastName")).SendKeys("Tada");
@@ -429,8 +464,7 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("postalCode")).SendKeys("N2L 6E3");
         driver.FindElement(By.Id("phone")).SendKeys("5483983379");
         driver.FindElement(By.Id("phone")).Click();
-        driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
-        driver.FindElement(By.Id("email")).Click();
+
         driver.FindElement(By.Id("email")).SendKeys("darshantada7@gmail.com");
         driver.FindElement(By.Id("age")).Click();
         driver.FindElement(By.Id("age")).SendKeys("45");
@@ -439,18 +473,29 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("accidents")).Click();
         driver.FindElement(By.Id("accidents")).SendKeys("4");
 
-        //Assert
+        // Submit the form
         driver.FindElement(By.Id("btnSubmit")).Click();
-        {
-            string value = driver.FindElement(By.Id("finalQuote")).GetAttribute("value");
-            Assert.That(value, Is.EqualTo("No Insurance for you!!  Too many accidents - go take a course!"));
-        }
+
+        // Wait for the final quote to appear and ensure the element is populated
+        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20)); // Increased wait time to 20 seconds
+        wait.Until(d => d.FindElement(By.Id("finalQuote")).Displayed); // Wait for the element to be displayed
+
+        // Alternatively, wait for the text to be populated inside the element
+        wait.Until(d => !string.IsNullOrEmpty(d.FindElement(By.Id("finalQuote")).Text)); // Wait until the text is not empty
+
+        // Debugging: Log the content of the final quote
+        string value = driver.FindElement(By.Id("finalQuote")).Text;
+        Console.WriteLine($"Final Quote Text: {value}");
+
+        // Assert the expected message
+        Assert.That(value, Is.EqualTo("No Insurance for you!!  Too many accidents - go take a course!"));
     }
+
     [Test]
     public void insuranceQuote12validDatalowAgeage15exp0insuranceRefused()
     {
 
-        //Arrange
+
         driver.Navigate().GoToUrl("http://localhost/prog8170a04/getQuote.html");
         driver.Manage().Window.Size = new System.Drawing.Size(786, 816);
 
@@ -480,11 +525,11 @@ public class Darshan_Tada_9000046_Assignment4
             Actions builder = new Actions(driver);
             builder.MoveToElement(element).Perform();
         }
-        {
-            var element = driver.FindElement(By.tagName("body"));
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(element, 0, 0).Perform();
-        }
+        //{
+        //    var element = driver.FindElement(By.tagName("body"));
+        //    Actions builder = new Actions(driver);
+        //    builder.MoveToElement(element, 0, 0).Perform();
+        //}
         Assert.That(driver.FindElement(By.Id("age-error")).Text, Is.EqualTo("Please enter a value greater than or equal to 16."));
     }
     [Test]
@@ -502,8 +547,7 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("address")).SendKeys("507, 383 albert street");
         driver.FindElement(By.Id("city")).SendKeys("waterloo");
         driver.FindElement(By.Id("postalCode")).SendKeys("N2L 6E3");
-        driver.FindElement(By.Id("phone")).SendKeys("5483983379");
-        driver.FindElement(By.Id("phone")).Click();
+
         driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
         driver.FindElement(By.Id("email")).Click();
         driver.FindElement(By.Id("email")).SendKeys("darshantada7@gmail.com");
@@ -536,8 +580,7 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("address")).SendKeys("507, 383 albert street");
         driver.FindElement(By.Id("city")).SendKeys("waterloo");
         driver.FindElement(By.Id("postalCode")).SendKeys("N2L 6E3");
-        driver.FindElement(By.Id("phone")).SendKeys("5483983379");
-        driver.FindElement(By.Id("phone")).Click();
+        
         driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
         driver.FindElement(By.Id("email")).Click();
         driver.FindElement(By.Id("email")).SendKeys("darshantada7@gmail.com");
@@ -567,8 +610,7 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("address")).SendKeys("507, 383 albert street");
         driver.FindElement(By.Id("city")).SendKeys("waterloo");
         driver.FindElement(By.Id("postalCode")).SendKeys("N2L 6E3");
-        driver.FindElement(By.Id("phone")).SendKeys("5483983379");
-        driver.FindElement(By.Id("phone")).Click();
+      
         driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
         driver.FindElement(By.Id("email")).Click();
         driver.FindElement(By.Id("email")).SendKeys("darshantada7@gmail.com");
@@ -587,3 +629,5 @@ public class Darshan_Tada_9000046_Assignment4
         }
     }
 }
+
+
