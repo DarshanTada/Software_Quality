@@ -497,8 +497,7 @@ public class Darshan_Tada_9000046_Assignment4
         driver.FindElement(By.Id("address")).SendKeys("507, 383 albert street");
         driver.FindElement(By.Id("city")).SendKeys("waterloo");
         driver.FindElement(By.Id("postalCode")).SendKeys("N2L 6E3");
-        driver.FindElement(By.Id("phone")).SendKeys("5483983379");
-        driver.FindElement(By.Id("phone")).Click();
+       
         driver.FindElement(By.Id("phone")).SendKeys("548-398-3379");
         driver.FindElement(By.Id("email")).Click();
         driver.FindElement(By.Id("email")).SendKeys("darshantada7@gmail.com");
@@ -511,16 +510,7 @@ public class Darshan_Tada_9000046_Assignment4
 
         //Assert
         driver.FindElement(By.Id("btnSubmit")).Click();
-        {
-            var element = driver.FindElement(By.Id("btnSubmit"));
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(element).Perform();
-        }
-        //{
-        //    var element = driver.FindElement(By.tagName("body"));
-        //    Actions builder = new Actions(driver);
-        //    builder.MoveToElement(element, 0, 0).Perform();
-        //}
+     
         Assert.That(driver.FindElement(By.Id("age-error")).Text, Is.EqualTo("Please enter a value greater than or equal to 16."));
     }
     [Test]
